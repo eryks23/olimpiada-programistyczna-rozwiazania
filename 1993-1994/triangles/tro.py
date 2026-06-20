@@ -1,22 +1,22 @@
 n = int(input(""))
 
 if not (3 <= n <= 10000):
-    print("Musisz podać co najmniej 3 odcinki i nie więcej niż 10000 odcinków!")
+    print("You must provide at least 3 segments and no more than 10000 segments!")
 else:
-    
-    odcinek = []
+    segments = []
 
     for i in range(n):
-        linia = input("")
+        line = input("")
         
-        a,b = linia.split("/")
+        a, b = line.split("/")
         a = int(a)
         b = int(b)
         
-        odcinek.append(a/b)
-        odcinek.sort()
+        segments.append(a / b)
+    
+    segments.sort()
 
-    if odcinek[0] + odcinek[1] > odcinek[-1]:
-        print("TAK")
+    if segments[0] + segments[1] > segments[-1]:
+        print("YES")
     else:
-        print("NIE")
+        print("NO")
